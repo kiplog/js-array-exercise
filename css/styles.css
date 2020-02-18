@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  background: #000;
+  color: white;
+  font-family: arial;
+  height: 100vh;
+}
+
+div {
+  border: 1px solid #333;
+  padding: 1em;
+}
+
+a {
+  color: #eda;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.container {
+  margin: 0 2rem;
+  display: -ms-grid;
+  display: grid;
+  grid-template-areas: "header header" "resources notes" "footer footer";
+  -ms-grid-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2fr;
+}
+
+.container > div {
+  background: #111;
+}
+
+.container .header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+}
+
+.container .resources {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: resources;
+}
+
+.container .notes {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: notes;
+}
+
+.container footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+}
+/*# sourceMappingURL=styles.css.map */

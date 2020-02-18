@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  background: #000;
+  color: white;
+  font-family: arial;
+}
+
+div {
+  border: 1px solid #333;
+  padding: 1em;
+}
+
+a {
+  color: #eda;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.container {
+  margin: 0 2rem;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "resources notes"
+    "footer footer";
+  grid-template-columns: 1fr 2fr;
+  // grid-template-rows: 100% 1fr 1fr;
+
+  & > div {
+    background: #111;
+  }
+
+  .header {
+    grid-area: header;
+  }
+  .resources {
+    grid-area: resources;
+  }
+  .notes {
+    grid-area: notes;
+  }
+  footer {
+    grid-area: footer;
+  }
+}
