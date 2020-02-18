@@ -19,6 +19,9 @@ function draw() {
   for (let particle of particles) {
     particle.update();
     particle.show();
+    if (particle.delete()) {
+      particles.splice(particle, 1);
+    }
   }
 
   // for (let i = particles.length - 1; i >= 0; i--) {
