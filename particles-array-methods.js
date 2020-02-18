@@ -14,13 +14,20 @@ function draw() {
   let p = new Particle();
   particles.push(p);
 
-  for (let i = particles.length - 1; i >= 0; i--) {
-    particles[i].update();
-    particles[i].show();
-    if (particles[i].delete()) {
-      particles.splice(i, 1);
-    }
+  // change for loop to for of loop
+
+  for (let particle of particles) {
+    particle.update();
+    particle.show();
   }
+
+  // for (let i = particles.length - 1; i >= 0; i--) {
+  //   particles[i].update();
+  //   particles[i].show();
+  //   if (particles[i].delete()) {
+  //     particles.splice(i, 1);
+  //   }
+  // }
 }
 
 class Particle {
