@@ -31,7 +31,9 @@ function draw() {
   //     particles.splice(i, 1);
   //   }
   // }
-}
+} // end of draw function
+
+// change the previous to arrow function
 
 class Particle {
   constructor() {
